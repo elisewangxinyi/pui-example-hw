@@ -1,5 +1,6 @@
 # PUI Homework
 
-Deployed website: add the URL to your deployed website
+Deployed website: https://elisewangxinyi.github.io/pui-hw
 
-Repository link: https://elisewangxinyi.github.io/pui-hw/
+Repository link: https://github.com/elisewangxinyi/pui-hw
+
