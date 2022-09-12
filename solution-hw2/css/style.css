@@ -107,9 +107,8 @@ a {
 .product-thumbnail:hover {
     background-color: yellow;
     border-radius:10px;
-    font-weight: bold;
+    
 }
-
 
 .thumbnail-pic img {
     width: 100%;
@@ -124,6 +123,10 @@ a {
     margin-bottom:0px;
     font-weight: 500;
     text-decoration:underline;
+}
+
+.product-name:hover {
+    font-weight: bold;
 }
 
 
