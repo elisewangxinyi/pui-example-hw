@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--Header-->
+    <div class="header">
+        <!--logo-->
+        <div class="header-logo">
+            <a href="gallery.html">
+                <img  src="assets/logo-01.svg" 
+                    alt="Logo of Bun Bun Bake Shop">
+            </a>
+        </div>
+        <!--content-->
+        <div class="header-content">
+            <nav>
+                <div id="current" class="navigation">
+                    <a href="gallery.html">PRODUCTS</a>
+                </div>
+            
+                <div class="navigation">
+                    <a href="cart.html">CART</a>
+                </div>
+            </nav>
+            <hr class="divider">
+            <h1>Orignal cinnamon roll</h1>
+        </div>
+    </div>
+
+    <!--Product Detail-->
+    <div class="product-detail">
+        <!--product blowup-->
+        <div class="detail-pic">
+            <img  src="assets/original-cinnamon-roll.jpg"
+                  alt="blowup of a original cinnamon roll">
+        </div>
+        
+
+        <!--product customization-->
+        <div class="customization">
+            <p>Customize our delicious, hand-made cinnamon 
+                roll to your liking!</p>
+            <div class="dropdown">
+                <label for="glazing-select">Glazing:<br></label>
+            
+                <select name="glazing" id="glazing-select">
+                    <option value="original">Keep original</option>
+                    <option value="sugar">Sugar milk</option>
+                    <option value="vanilla">Vanilla milk</option>
+                    <option value="db-choco">Double chocolate</option>
+                </select>
+            </div>
+
+            <div class="dropdown">
+                <label for="size-select">Pack size:<br></label>
+            
+                <select name="pack-size" id="size-select">
+                    <option value="one">1</option>
+                    <option value="three">3</option>
+                    <option value="six">6</option>
+                    <option value="twelve">12</option>
+                </select>
+            </div> 
+            <!--price and cart-->
+            <div class="add-to-cart">
+                <h2 class="item-price">$2.49</h2>
+                <button class="btn-addCart">Add to Cart</button>
+            </div>
+
+
+        </div>
+        
+    </div>
+
+</body>
