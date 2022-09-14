@@ -1,0 +1,281 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    /* Set the default font family and color*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+
+    border-style: solid;
+  
+    /* Set the background color*/
+    background-color: white;
+  }
+
+
+nav{
+    display: flex;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    justify-content: flex-end;
+    gap: 50px;
+
+}
+
+h1 {
+    font-size: 34px;
+    font-weight: 100;
+    margin-bottom: 0px;
+    margin-top: 80px;
+}
+
+h2 {
+    font-size:22px;
+    font-weight: 100;
+    margin-top: 3px;
+    margin-bottom:0px;   
+}
+
+a {
+    color:black;
+    text-decoration:none;
+}
+
+/* Header */
+.header {
+    display: flex;
+}
+
+.header-logo {
+    width: 450px;
+    padding-top: 30px;
+    padding-left: 40px;
+    flex-shrink: 0;
+}
+
+.header-content {
+    flex-grow: 1;
+    margin-left: 40px;
+}
+
+.divider {
+    height: 7px;
+    background-color:black;
+}
+
+.navigation {
+    width:fit-content;
+    text-align:center;
+    font-size: 24px;
+    margin-right: 60px;
+
+}
+
+#current {
+    font-weight:bold;
+    background-color:yellow; 
+}
+
+
+/*Product Gallery*/
+
+.product-list {
+    width: 1000px;
+    margin-left:auto;
+    margin-right: auto;
+
+    padding-top: 80px;
+    padding-bottom: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+
+.product-thumbnail {
+    display:block;
+    width:310px;
+    height:auto;
+    padding:10px;
+    text-align:left;
+
+}
+
+.product-thumbnail:hover {
+    background-color: yellow;
+    border-radius:10px;
+    
+}
+
+.thumbnail-pic img {
+    width: 100%;
+    border-style:solid;
+    border-width:4px;
+    border-radius:8px;
+    border-color:black;
+}
+
+.product-name {
+    margin-top:10px;
+    margin-bottom:0px;
+    font-weight: 500;
+    text-decoration:underline;
+}
+
+.product-name:hover {
+    font-weight: bold;
+}
+
+
+/*Product Detail Page*/
+.product-detail {
+    display: flex;
+
+    width: 1200px;
+
+    padding-top: 80px;
+    padding-bottom: 30px;
+
+}
+
+.detail-pic img {
+    width:600px;
+    height:600px;
+    object-fit: cover;
+
+    margin-left: 150px;
+
+    border-style:solid;
+    border-width:4px;
+    border-radius:8px;
+    border-color:black;
+}
+
+.customization {
+    width:300px;
+    margin-left: auto;
+    margin-right:auto;
+    padding-top: 20px;
+    text-align:left;
+
+}
+
+.dropdown {
+    margin-top:50px;
+    margin-bottom:60px;
+}
+
+select {
+    width:300px;
+    font-size:22px;
+    padding: 8px;
+    margin-top:10px;
+    border: 3px solid black;
+}
+
+.add-to-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-price {
+    font-weight: bold;
+}
+
+.btn-addCart {
+    /* margin-left:40px; */
+    width: 200px;
+    height: 50px;
+    font-size: 22px;
+    font-weight: 700;
+    background-color: yellow;
+    border: 3px solid black;
+}
+
+.btn-addCart:hover {
+    cursor:pointer;
+  }
+
+
+/*Shopping Cart*/
+.shopping-cart {
+    padding-top: 80px;
+    padding-bottom: 30px;
+    padding-left: 500px;
+}
+
+.item {
+    display: flex;
+
+    gap: 50px;
+    margin-top: 10px;
+    margin-bottom:50px;
+    padding-right: 30px;
+}
+
+.cart-pic {
+    width:150px;
+    height:150px;
+    border-style:solid;
+    border-width:4px;
+    border-radius:8px;
+    border-color:black;
+}
+
+.cart-description {
+    font-size: 24px;
+}
+
+.btn-rmv {
+    display: block;
+    border-style:none;
+    background-color:white;
+    text-decoration:underline;
+    font-weight:bold;
+}
+
+.btn-rmv:hover {
+    background-color: rgb(201, 197, 197);
+    cursor:pointer;
+  }
+
+.cart-total{
+    display: flex;
+    padding-right: 30px;
+}
+
+.cart-price {
+    flex-grow: 1;
+    text-align: right;
+    font-size:28px;
+}
+
+#total {
+    flex-shrink: 0;
+    width: 450px;
+    font-size:28px;
+    text-align: center;
+}
+
+.btn-checkout {
+    display: block;
+    width: 200px;
+    height: 50px;
+
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 30px;
+    
+    font-size: 22px;
+    font-weight: 700;
+    background-color: yellow;
+    border: 3px solid black;
+}
+
+.btn-checkout:hover {
+    cursor:pointer;
+}
