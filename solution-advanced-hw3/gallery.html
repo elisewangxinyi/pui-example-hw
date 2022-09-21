@@ -24,10 +24,18 @@
                     <a href="gallery.html">PRODUCTS</a>
                 </div>
             
-                <div class="navigation">
-                    <a href="cart.html">CART</a>
+                <div class="navigation">CART
+                    <!-- <a href="cart.html">CART</a> -->
+                    <div id="cartPopup">
+                        <p class="popup-summary">Added to cart:</p>
+                        <p id="popup-name" class="popup-summary"></p>
+                        <p id="popup-glazing" class="popup-summary"></p>
+                        <p id="popup-size" class="popup-summary"></p>
+                        <p id="popup-price" class="popup-summary"></p>
+                    </div>
                 </div>
             </nav>
+            
             <div>
                 <p id="total-item" class="cart-content">0 item</p>
                 <p id="total-price"class="cart-content">Total: $ 0</p>
@@ -54,7 +62,7 @@
             <!--glazing-->
             <div class="glazing">
                 <label>Glazing:</label>
-                <select name="glazing" class="glazing-select"></select>
+                <select class="glazing-select"></select>
             </div>
             <!--pack size-->
             <div class="pack-size">

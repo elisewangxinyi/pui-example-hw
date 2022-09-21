@@ -1,4 +1,6 @@
-//TODO: pop up
+/*TODO: 
+pop up last 3 secs
+*/
 
 const glazingOptions = ["Keep original", "Sugar milk", 
                       "Vanilla milk", "Double Chocolate"];
@@ -20,6 +22,7 @@ class Roll {
         this.cartPrice = price;
         this.glazing = glazing;
         this.packSize = packSize;
+        this.displaySize = packSize;
 
         this.element = document.querySelector(elementID);
 
@@ -40,20 +43,21 @@ class Roll {
     }
 
     populateDropdown(optionList, optionType, container){
-        for (let displayName of optionList){
+        for (let option of optionList){
             //create a new <btn> element
             const elem = document.createElement('option');
         
             // assign btn value and displayname
-            elem.setAttribute('value', optionType[displayName]);
-            elem.innerText = displayName;
-    
+            elem.setAttribute('value', optionType[option]);
+            // elem.setAttribute('name', option);
+            elem.innerText = option;
             // append to container
             container.appendChild(elem);
         }
     }
     
     updateSize(event) {
+        // Set all buttons to white
         for (const btn of this.sizebuttons){
             btn.style.backgroundColor = 'white';
         }
@@ -61,14 +65,22 @@ class Roll {
         const size = event.target.value;
         event.target.style.backgroundColor = 'lightgrey';
         event.target.style.fontWeight = '700';
+
         this.packSize = parseInt(size);
+        this.displaySize = event.target.innerText;
         this.updateTotal();
     }
 
     updateGlazing(){
-        const priceChange = this.element.querySelector('.glazing-select').value;
+        const selectedGlazing = this.element.querySelector('.glazing-select');
+
+        const priceChange = selectedGlazing.value;
         const unitPrice = parseFloat(priceChange) + parseFloat(this.basePrice);
         
+        const display = selectedGlazing.options[selectedGlazing.selectedIndex].text;
+        
+
+        this.glazing = display;
         this.price = unitPrice;
 
         this.updateTotal();
@@ -82,6 +94,8 @@ class Roll {
     }
 
     addToCart(){
+        this.popUp();
+        
         cart.push(this);
         const totalItem = document.querySelector('#total-item');
         const totalPrice = document.querySelector('#total-price');
@@ -90,7 +104,30 @@ class Roll {
         for (const item of cart){
             price += Number(item.cartPrice);
         }
-        totalPrice.innerText = `Total: $ ${price}`;
+        totalPrice.innerText = `Total: $ ${price.toFixed(2)}`;
+    }
+
+    popUp() {
+        const popup = document.querySelector("#cartPopup");
+
+        const popupName = document.querySelector('#popup-name');
+        const popupGlazing = document.querySelector('#popup-glazing');
+        const popupSize = document.querySelector('#popup-size');
+        const popupPrice = document.querySelector('#popup-price');
+
+        popupName.innerText = this.type;
+        popupGlazing.innerText = `${this.glazing} glazing`;
+        popupSize.innerText = `Pack of ${this.displaySize}`
+        popupPrice.innerText = `Price: $${this.cartPrice}`
+
+        popup.classList.add("edit-mode");
+
+        setTimeout(this.closePopup, 3000);
+    }
+
+    closePopup(){
+        const popup = document.querySelector("#cartPopup");
+        popup.classList.remove("edit-mode");
     }
 
     
@@ -98,7 +135,7 @@ class Roll {
 
 
 const originalBun = new Roll(
-    'original',
+    'Original cinnamon roll',
     2.49,
     'Keep original',
     1,
@@ -106,7 +143,7 @@ const originalBun = new Roll(
 )
 
 const appleBun = new Roll(
-    'apple cinnamon',
+    'Apple cinnamon roll',
     3.49,
     'Keep original',
     1,
@@ -114,7 +151,7 @@ const appleBun = new Roll(
 )
 
 const raisinBun = new Roll(
-    'raisin',
+    'Raisin cinnamon roll',
     2.99,
     'Keep original',
     1,
@@ -122,7 +159,7 @@ const raisinBun = new Roll(
 )
 
 const walnutBun = new Roll(
-    'walnut',
+    'Walnut cinnamon roll',
     3.49,
     'Keep original',
     1,
@@ -130,7 +167,7 @@ const walnutBun = new Roll(
 )
 
 const dbChocoBun = new Roll(
-    'double chocolate',
+    'Double-chocolate cinnamon roll',
     3.99,
     'Keep original',
     1,
@@ -138,12 +175,11 @@ const dbChocoBun = new Roll(
 )
 
 const strawberryBun = new Roll(
-    'strawberry',
+    'Strawberry cinnamon roll',
     3.99,
     'Keep original',
     1,
     '#strawberry'
 )
-
 
 
