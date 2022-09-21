@@ -28,6 +28,10 @@
                     <a href="cart.html">CART</a>
                 </div>
             </nav>
+            <div>
+                <p id="total-item" class="cart-content">0 item</p>
+                <p id="total-price"class="cart-content">Total: $ 0</p>
+            </div>
             <hr class="divider">
             <h1>Our hand-made cinnamon rolls</h1>
         </div>
@@ -39,7 +43,7 @@
         <!--block for each cinnamon-->
 
         <!--orginal-->
-        <div class="product-thumbnail">
+        <div id="original" class="product-thumbnail">
             <!--pic-->
             <div class="thumbnail-pic">
                 <img src="assets/original-cinnamon-roll.jpg"
@@ -49,17 +53,16 @@
             <h2 class="product-name">Original cinnamon roll</h2>
             <!--glazing-->
             <div class="glazing">
-                <label for="glazing-select">Glazing:</label>
-            
+                <label>Glazing:</label>
                 <select name="glazing" class="glazing-select"></select>
             </div>
             <!--pack size-->
             <div class="pack-size">
                 <label>Pack size:</label>
-                <button class="btn-pack-size">1</button>
-                <button class="btn-pack-size">3</button>
-                <button class="btn-pack-size">6</button>
-                <button class="btn-pack-size">12</button>
+                <button class="btn-pack-size" value="1">1</button>
+                <button class="btn-pack-size" value="3">3</button>
+                <button class="btn-pack-size" value="5">6</button>
+                <button class="btn-pack-size" value="10">12</button>
             </div>
             <!--price-->
             <div class="add-to-cart">
@@ -69,7 +72,7 @@
         </div>
 
         <!--apple cinnamon-->
-        <div class="product-thumbnail">
+        <div id="apple" class="product-thumbnail">
             <div class="thumbnail-pic">
                 <img src="assets/apple-cinnamon-roll.jpg"
                      alt="apple cinnamon roll">
@@ -85,10 +88,10 @@
             <!--pack size-->
             <div class="pack-size">
                 <label>Pack size:</label>
-                <button class="btn-pack-size">1</button>
-                <button class="btn-pack-size">3</button>
-                <button class="btn-pack-size">6</button>
-                <button class="btn-pack-size">12</button>
+                <button class="btn-pack-size" value="1">1</button>
+                <button class="btn-pack-size" value="3">3</button>
+                <button class="btn-pack-size" value="5">6</button>
+                <button class="btn-pack-size" value="10">12</button>
             </div>
             <!--price-->
             <div class="add-to-cart">
@@ -98,7 +101,7 @@
         </div>
 
         <!--raisin-->
-        <div class="product-thumbnail">
+        <div id="raisin" class="product-thumbnail">
             <div class="thumbnail-pic">
                 <img src="assets/raisin-cinnamon-roll.jpg"
                      alt="raisin cinnamon roll">
@@ -115,10 +118,10 @@
             <!--pack size-->
             <div class="pack-size">
                 <label>Pack size:</label>
-                <button class="btn-pack-size">1</button>
-                <button class="btn-pack-size">3</button>
-                <button class="btn-pack-size">6</button>
-                <button class="btn-pack-size">12</button>
+                <button class="btn-pack-size" value="1">1</button>
+                <button class="btn-pack-size" value="3">3</button>
+                <button class="btn-pack-size" value="5">6</button>
+                <button class="btn-pack-size" value="10">12</button>
             </div>
             <!--price-->
             <div class="add-to-cart">
@@ -128,7 +131,7 @@
         </div>
 
         <!--walnut cinnamon-->
-        <div class="product-thumbnail">
+        <div id="walnut"class="product-thumbnail">
             <div class="thumbnail-pic">
                 <img src="assets/walnut-cinnamon-roll.jpg"
                      alt="walnut cinnamon roll">
@@ -146,10 +149,10 @@
             <!--pack size-->
             <div class="pack-size">
                 <label>Pack size:</label>
-                <button class="btn-pack-size">1</button>
-                <button class="btn-pack-size">3</button>
-                <button class="btn-pack-size">6</button>
-                <button class="btn-pack-size">12</button>
+                <button class="btn-pack-size" value="1">1</button>
+                <button class="btn-pack-size" value="3">3</button>
+                <button class="btn-pack-size" value="5">6</button>
+                <button class="btn-pack-size" value="10">12</button>
             </div>
             <!--price-->
             <div class="add-to-cart">
@@ -159,7 +162,7 @@
         </div>
 
         <!--double chocolate-->
-        <div class="product-thumbnail">
+        <div id="db-choco" class="product-thumbnail">
             <div class="thumbnail-pic">
                 <img  src="assets/double-chocolate-cinnamon-roll.jpg"
                       alt="double chocolate cinnamon roll">
@@ -175,10 +178,10 @@
             <!--pack size-->
             <div class="pack-size">
                 <label>Pack size:</label>
-                <button class="btn-pack-size">1</button>
-                <button class="btn-pack-size">3</button>
-                <button class="btn-pack-size">6</button>
-                <button class="btn-pack-size">12</button>
+                <button class="btn-pack-size" value="1">1</button>
+                <button class="btn-pack-size" value="3">3</button>
+                <button class="btn-pack-size" value="5">6</button>
+                <button class="btn-pack-size" value="10">12</button>
             </div>
             <!--price-->
             <div class="add-to-cart">
@@ -188,7 +191,7 @@
         </div>
 
         <!--strawberry-->
-        <div class="product-thumbnail">
+        <div id="strawberry" class="product-thumbnail">
             <div class="thumbnail-pic">
                 <img  src="assets/strawberry-cinnamon-roll.jpg"
                         alt="strawberry cinnamon roll">
@@ -204,10 +207,10 @@
             <!--pack size-->
             <div class="pack-size">
                 <label>Pack size:</label>
-                <button class="btn-pack-size">1</button>
-                <button class="btn-pack-size">3</button>
-                <button class="btn-pack-size">6</button>
-                <button class="btn-pack-size">12</button>
+                <button class="btn-pack-size" value="1">1</button>
+                <button class="btn-pack-size" value="3">3</button>
+                <button class="btn-pack-size" value="5">6</button>
+                <button class="btn-pack-size" value="10">12</button>
             </div>
             <!--price-->
             <div class="add-to-cart">
